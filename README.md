@@ -6,7 +6,7 @@
 
 - 请确保机器已经安装了Yaf框架, 并且已经加载入PHP
 
-- 请确保机器已经安装了Composer安装依赖
+- 请确保机器已经安装了Composer, 安装依赖
 
 ```shell
     composer install
