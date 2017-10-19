@@ -1,0 +1,17 @@
+{
+  "name": "dennyellen/yaf-sample-demo",
+  "type": "project",
+  "description": "yaf sample demo",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "dennyelen",
+      "email": "tuqian@hotmail.com"
+    }
+  ],
+  "require": {
+    "ares333/yaf-doc": "^1.1",
+    "catfan/Medoo": "^1.4"
+  }
+}
