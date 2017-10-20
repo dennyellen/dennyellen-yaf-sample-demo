@@ -12,6 +12,7 @@
   ],
   "require": {
     "ares333/yaf-doc": "^1.1",
-    "catfan/Medoo": "^1.4"
+    "catfan/Medoo": "^1.4",
+    "yuyang/yaf-plugin": "^1.0"
   }
 }
