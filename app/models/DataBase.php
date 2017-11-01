@@ -1,21 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: test
- * Date: 17-10-20
- * Time: 下午4:04
- */
+
 use Medoo\Medoo;
 
 class DataBaseModel
 {
-    private function init($config)
+    protected $connection;
+
+    /**
+     * DataBaseModel constructor.
+     */
+    public function __construct()
     {
-        // Initialize
-        $database =  new Medoo($config);
-        return $database;
+        $this->setConnection();
     }
-    public function Connection()
+
+    /**
+     * @return array
+     */
+    public function setConnection()
     {
         $config = [
             // required
@@ -29,7 +31,23 @@ class DataBaseModel
             'charset' => 'utf8',
             'port' => 3306,
         ];
-        $db = $this->init($config);
+        return $this->connection = $config;
+    }
+
+    /**
+     * @return Medoo
+     */
+    public function db()
+    {
+        $db = new Medoo(self::getConnection());
         return $db;
+    }
+
+    /**
+     * @return mixed
+     */
+    protected function getConnection()
+    {
+        return $this->connection;
     }
 }
