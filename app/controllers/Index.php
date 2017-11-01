@@ -33,8 +33,18 @@ class IndexController extends Controller_Abstract {
 	}
 	public function dbAction()
     {
+        // 实例 Model
         $db = new DataBaseModel();
-        var_dump($db->Connection());
+        // 查询数据
+        $result = $db->db()->select('banners',[
+            'url',
+            'user_id'
+        ]);
+        // 设置响应头
+        $this->getResponse()->setHeader('Content-type','application/json');
+        // 设置响应内容
+        $this->getResponse()->setBody(json_encode(array('data'=> $result)));
+
          return FALSE;
     }
 }
