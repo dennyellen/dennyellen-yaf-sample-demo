@@ -1,15 +1,24 @@
 # Yaf Sample Demo
 
-## Yaf Sample Demo Project
+## 安装
+> 由于依赖了 yuyang/yaf-plugin 来兼容 yaf 和 composer 的自动载入机制，
+目前 Windows 环境可能出现问题
 
-### 可以按照以下步骤来部署和运行程序
+- 安装Yaf框架扩展, 并且已经加载入PHP
+```shell
+    $php -m |grep yaf
+    yaf
+```
 
-- 请确保机器已经安装了Yaf框架, 并且已经加载入PHP
-
-- 请确保机器已经安装了Composer, 安装依赖
+- 安装Composer, Composer 版本需 >=1.2 ,推荐使用Phar方式
+```shell
+    $composer -V
+    Composer version 1.5.2 2017-09-11 16:59:25
+```
+- 安装项目依赖
 
 ```shell
-    composer install
+    $composer install
 ```
 
 - 需要在php.ini里面启用如下配置,生产的代码才能正确运行
@@ -23,5 +32,5 @@
 - 快速测试安装
 
 ```shell
-    php -S localhost:8000 -t public
+    $php -S localhost:8000 -t public
 ```
